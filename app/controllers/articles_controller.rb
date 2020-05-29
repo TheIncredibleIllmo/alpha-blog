@@ -1,8 +1,10 @@
 class ArticlesController < ApplicationController
+
+    before_action :set_article, only: [:edit, :update, :show, :destroy]
+
     def show
         #byebug
         #instance variable @article is available generally for the whole controller
-        @article = Article.find(params[:id])
     end
 
     def index
@@ -19,7 +21,7 @@ class ArticlesController < ApplicationController
         #render plain: @article.inspect
 
         #white list, strong params security introduced in RoR 6
-        @article = Article.new(params.require(:article).permit(:title, :description))
+        @article = Article.new(get_article_params)
          
         if @article.save {
             flash[:notice] = "Article was created successfully."
@@ -32,13 +34,11 @@ class ArticlesController < ApplicationController
     end
 
     def edit
-        @article = Article.find(params[:id])
     end
     
     # Action
     def update
-        @article = Article.find(params[:id])
-        if @article.update(params.require(:article).permit(:title, :description));
+        if @article.update(get_article_params);
             flash[:notice] = "Article was updated succesfully"
             redirect_to @article
         else
@@ -47,8 +47,17 @@ class ArticlesController < ApplicationController
     end
 
     def destroy
-        @article = Article.find(params[:id])
         @article.destroy
         redirect_to  articles_path
     end
+
+    private 
+    def set_article
+        @article = Article.find(params[:id])
+    end
+    
+    def get_article_params
+        params.require(:article).permit(:title, :description) 
+    end
+
 end
