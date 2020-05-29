@@ -6,6 +6,8 @@
 }
 
 h1,
+h5,
+div,
 p,
 small {
     font-family: 'Manrope';
@@ -49,7 +51,7 @@ body {
 
 #page-content {
     flex: 1 0 auto;
-    background-color: lightgray;
+    background-color: white;
 }
 
 #sticky-footer {
@@ -61,32 +63,27 @@ body {
     color: #ADEFD1FF;
 }
 
-.btn {
+.btn-primary {
     background-color: #ADEFD1FF;
     color: #00203FFF;
     border-color: #ADEFD1FF;
 }
 
-.btn:hover {
+.nav-link:hover {
     text-decoration: underline;
 }
 
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active,
-.btn-primary:active:focus:not(:disabled):not(.disabled),
-.btn:focus,
-.btn:active,
-.btn:hover {
+.btn-primary:active:focus:not(:disabled):not(.disabled) {
     box-shadow: none !important;
     outline: 0;
+    background-color: #00203FFF;
+    color: #ADEFD1FF;
+    border-color: #00203FFF;
 }
 
 .dark-text {
     color: #00203FFF;
-}
-
-.dark-button {
-    background-color: #00203FFF;
-    color: #ADEFD1FF;
 }
