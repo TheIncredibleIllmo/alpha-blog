@@ -1,5 +1,92 @@
 @import 'bootstrap/dist/css/bootstrap';
 
+@font-face {
+    font-family: 'Manrope';
+    src: font-url('../stylesheets/fonts/Manrope-Medium.ttf') format("truetype");
+}
+
+h1,
+p,
+small {
+    font-family: 'Manrope';
+}
+
 .navbar {
-    background-color: #FDF6EA !important;
+    background-color: #ADEFD1FF !important;
+    font-family: 'Manrope';
+}
+
+.nav-link {
+    color: #00203FFF !important;
+    font-family: 'Manrope';
+}
+
+#logo {
+    float: left;
+    font-size: 1.7em;
+    color: #00203FFF !important;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+#home-container {
+    margin-top: 25px;
+}
+
+.jumbotron {
+    background-image: asset-url('home-img');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 425px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#page-content {
+    flex: 1 0 auto;
+    background-color: lightgray;
+}
+
+#sticky-footer {
+    flex-shrink: none;
+    background-color: #00203FFF;
+}
+
+.light-text {
+    color: #ADEFD1FF;
+}
+
+.btn {
+    background-color: #ADEFD1FF;
+    color: #00203FFF;
+    border-color: #ADEFD1FF;
+}
+
+.btn:hover {
+    text-decoration: underline;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:active:focus:not(:disabled):not(.disabled),
+.btn:focus,
+.btn:active,
+.btn:hover {
+    box-shadow: none !important;
+    outline: 0;
+}
+
+.dark-text {
+    color: #00203FFF;
+}
+
+.dark-button {
+    background-color: #00203FFF;
+    color: #ADEFD1FF;
 }
