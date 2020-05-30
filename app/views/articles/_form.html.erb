@@ -1,19 +1,24 @@
-<%=render 'error_message' %>
-
-<%# it already knows how to form the url %>
-<%= form_with(model: @article, local: true) do |f|%> 
-    <p>
-        <%= f.label :title%><br/>
-        <%= f.text_field :title%>
-    </p>
-
-    <p>
-        <%= f.label :description%><br/>
-        <%= f.text_area :description%>
-    </p>
-
-    <p>
-        <%= f.submit%><br/>
-    </p>
-
-<% end %>
+<div class="container">
+  <%=render 'error_message' %>
+  <%# it already knows how to form the url %>
+  <%= form_with(model: @article, class: "shadow p-3 mb-5 bg-white rounded",local: true) do |f|%>
+    <div class="form-group row">
+      <%= f.label :title, class: "col-12 col-form-label dark-text" %>
+      <div class="col-12">
+        <%= f.text_field :title,class: "form-control", placeholder: "Article's Title"%>
+      </div>
+    </div>
+    <div class="form-group row">
+      <%= f.label :description, class: "col-12 col-form-label dark-text" %><br/>
+      <div class="col-12">
+        <%= f.text_area :description, placeholder: "Article's Description",rows:10, class: "form-control"%>
+      </div>
+    </div>
+    <div class="form-group row justify-content-center">
+      <%= f.submit class: "btn btn-primary"%>
+    </div>
+  <% end %>
+  <div class="row justify-content-center">
+    <%= link_to  "Return", articles_path, class: "btn btn-outline-info" %>
+  </div>
+</div>

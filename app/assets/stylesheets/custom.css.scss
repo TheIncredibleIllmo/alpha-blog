@@ -6,8 +6,12 @@
 }
 
 h1,
+h3,
+h4,
 h5,
+li,
 div,
+strong,
 p,
 small {
     font-family: 'Manrope';
@@ -86,4 +90,18 @@ body {
 
 .dark-text {
     color: #00203FFF;
+}
+
+.float-btn {
+    position: fixed;
+    top: 5rem;
+    right: 2rem;
+}
+
+.btn-circle.btn-xl {
+    width: 70px;
+    height: 70px;
+    padding: 5px;
+    font-size: 40px;
+    border-radius: 35px;
 }
