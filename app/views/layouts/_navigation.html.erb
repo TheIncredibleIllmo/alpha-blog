@@ -11,6 +11,12 @@
       <li class="nav-item active">
         <%= link_to  "Bloggers", users_path, class:"nav-link" %>
       </li>
+      <li class="nav-item active">
+        <%= link_to  "Log in", login_path, class:"nav-link" %>
+      </li>
+      <li class="nav-item active">
+        <%= link_to  "Logout", login_path, class:"nav-link", method: :delete %>
+      </li>
     </ul>
   </div>
 </nav>
