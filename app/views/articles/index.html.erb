@@ -3,6 +3,8 @@
 <%=render 'article'%>
 <%=render 'shared/paging_index', obj: @articles%>
 <br/>
-<div class="row float-btn">
-  <%= link_to  "+", new_article_path, class:"btn btn-primary btn-circle btn-xl" %>
-</div>
+<%if logged_in?%>
+  <div class="row float-btn">
+    <%= link_to  "+", new_article_path, class:"btn btn-primary btn-circle btn-xl" %>
+  </div>
+<%end%>
