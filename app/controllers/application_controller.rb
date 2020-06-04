@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   def current_user
     #one option or the other
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
 
   def logged_in?
