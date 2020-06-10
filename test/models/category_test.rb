@@ -3,7 +3,7 @@ require "test_helper"
 class CategoryTest < ActiveSupport::TestCase
   #runs before any test
   def setup
-    @category = Category.new(name: "Sports")
+    @category = Category.new(name: "Trival")
   end
 
   test "category should be valid" do
@@ -19,7 +19,7 @@ class CategoryTest < ActiveSupport::TestCase
   test "name should be unique" do
     #it should be saved to validate uniqueness
     @category.save
-    @second_category = Category.new(name: "Sports")
+    @second_category = Category.new(name: "News")
     assert_not @second_category.valid?
   end
 
