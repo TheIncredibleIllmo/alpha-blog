@@ -3,7 +3,7 @@ require "test_helper"
 class CategoriesControllerTest < ActionDispatch::IntegrationTest
   setup do
     #required to genereate the Id
-    @category = Category.new(name: "Nice")
+    @category = Category.new(name: "Good")
   end
 
   test "should get index" do
